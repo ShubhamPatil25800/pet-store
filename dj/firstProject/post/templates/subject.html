@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ol>
+
+         {%for i in subject%}
+
+               {% if forloop.first %}
+
+                    <li style="color:red">{{i}}</li>
+
+               {%else%}
+                     <li>{{i}}</li>
+
+               {%endif%}
+
+         {%endfor%}
+
+
+    </ol>
+    
+</body>
+</html>

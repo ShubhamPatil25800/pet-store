@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+
+
+{% block content%}
+
+
+<div class='container p-5 border border-dark m-4'>
+
+   <form method='post'>
+                {% csrf_token%}
+
+                {%comment%}  {{form}}    {% endcomment %}
+
+                {% if message%}
+
+                  <div class="alert alert-secondary" role="alert">
+                   {{message}}
+                  </div>
+
+
+                {%endif%}
+
+                <h3 class="bg-dark text-white p-4">Register</h3>
+
+                {% for field in form%}
+
+                         
+                           {{field.label_tag}}
+                           {{field}}
+                           <div id="emailHelp" class="form-text">  {{field.help_text}}</div>
+                         
+                           <br>
+
+
+                {%endfor%}
+
+
+                <button type="submit" class="btn btn-dark">Register</button>
+
+    </form>
+
+
+</div>
+
+{% endblock%}

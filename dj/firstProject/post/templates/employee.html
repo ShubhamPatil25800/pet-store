@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% for k,v in employees.items %}
+              <hr>
+              <p>Key:{{k}}</p>
+              <p>Counter: {{forloop.counter0}} Reverse counter: {{forloop.revcounter0}}</p>
+              <p>Is is first element?? {{forloop.first}}</p>
+              <p>Is is last element?? {{forloop.last}}</p>
+
+              <hr>
+              {% for k1,v1 in v.items%}
+                      
+                    <p>{{k1}} - {{v1}}</p>
+                   
+              {%endfor%}
+
+    {%endfor%}
+
+
+
+
+    
+</body>
+</html>
