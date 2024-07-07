@@ -6,3 +6,6 @@ class CustomUserCreationForm(UserCreationForm):
         model=User
         fields=['username','first_name','last_name','email']
         # fields='__all__' gives you all fields of User model
+
+class User:
+    pass
